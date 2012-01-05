@@ -83,6 +83,8 @@
 	$GLOBALS['cfg']['flickr_api_key'] = 'TWEAK ME';
 	$GLOBALS['cfg']['flickr_api_secret'] = 'TWEAK ME';
 	$GLOBALS['cfg']['flickr_api_perms'] = 'read';
+	# required standard photo response (srp) extras: original_format,tags,media,date_upload,date_taken,geo
+	$GLOBALS['cfg']['flickr_api_spr_extras'] = 'original_format,tags,media,date_upload,date_taken,geo';
 
 	# See also: https://github.com/straup/parallel-flickr/blob/master/bin/generate_secret.php
 

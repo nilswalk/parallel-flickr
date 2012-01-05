@@ -1,0 +1,13 @@
+CREATE TABLE `FlickrGalleries` (
+  `id` BIGINT(20) UNSIGNED NOT NULL,
+  `user_id` INT(11) UNSIGNED NOT NULL,
+  `primary_photo_id` BIGINT(20) UNSIGNED NOT NULL,
+  `title` VARCHAR(255),
+  `description` TEXT 	
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `FlickrGalleriesPhotos` (
+  `gallery_id` BIGINT(20) UNSIGNED NOT NULL,
+  `photo_id` BIGINT(20) UNSIGNED NOT NULL,
+  `comment` TEXT
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

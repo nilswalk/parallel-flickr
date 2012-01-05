@@ -19,10 +19,7 @@
 		$user = users_get_by_id($flickr_user['user_id']);
 
 		if (! $user){
-			return array(
-				'ok' => 0,
-				'error' => 'not a valid user',
-			);
+			return not_okay("invalid user");
 		}
 
 		$method = 'flickr.photos.search';
@@ -30,7 +27,7 @@
 		$args = array(
 			'user_id' => $nsid,
 			'auth_token' => $flickr_user['auth_token'],
-			'extras' => 'original_format,tags,media,date_upload,date_taken,geo',
+			'extras' => $GLOBALS['cfg']['flickr_api_spr_extras'],
 			'per_page' => 100,
 			'sort' => 'date-posted-desc',
 			'page' => 1,

@@ -13,6 +13,7 @@
 			0 => 'photos',
 			1 => 'faves',
 			2 => 'contacts',
+			3 => 'galleries',
 		);
 
 		if ($string_keys){
@@ -187,11 +188,7 @@
 		$backups = flickr_backups_for_user($user);
 
 		if (! isset($backups['faves'])){
-
-			return array(
-				'ok' => 0,
-				'error' => 'backups for faves not registered',
-			);
+			return note_okay("backups for faves not registered");
 		}
 
 		#
@@ -236,10 +233,7 @@
 
 		if (! isset($backups['contacts'])){
 
-			return array(
-				'ok' => 0,
-				'error' => 'backups not registered',
-			);
+			return not_okay("backups not registered");
 		}
 
 		$backup = $backups['contacts'];
@@ -271,6 +265,27 @@
 		flickr_backups_update($backup, $update);
 
 		return $rsp;
+	}
+
+	#################################################################
+
+	# THIS IS NOT EVEN CLOSE TO BEING FINISHED
+
+	function flickr_backups_get_galleries(&$user){
+
+		loadlib("flickr_galleries_import");
+
+		$backups = flickr_backups_for_user($user);
+
+		if (! isset($backups['galleries'])){
+
+			# return not_okay("galleries backups not registered");
+		}
+
+		$flickr_user = flickr_users_get_by_user_id($user['id']);
+		$rsp = flickr_galleries_import_for_nsid($flickr_user['nsid']);
+
+dumper($rsp);
 	}
 
 	#################################################################
