@@ -6,7 +6,7 @@ parallel-flickr 🐼
 mark`down`
 ```markdown```
 
-mark```down```
+
 _markdown_
 _mark_down
 mark_down_
