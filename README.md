@@ -2,15 +2,22 @@ parallel-flickr 🐼
 ==
 
 `markdown`
+
 `mark`down
+
 mark`down`
 
 
 _markdown_
+
 _mark_down
+
 mark_down_
+
 *markdown*
+
 *mark*down
+
 mark*down*
 
 parallel-flickr is a tool for backing up your Flickr photos and generating a database backed website that honours the viewing permissions you've chosen on Flickr. parallel-flickr is **not** a replacement for Flickr.
