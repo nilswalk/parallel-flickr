@@ -1,8 +1,7 @@
 parallel-flickr 🐼
 ==
 
-```
-a big block of text
+```a big block of text
 whith lines
 ```
 
